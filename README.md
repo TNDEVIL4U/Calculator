@@ -1,122 +1,96 @@
-📘 Java Calculator
-📌 Overview
-This Java-based GUI calculator provides basic arithmetic operations using the Swing and AWT libraries. The interface mimics a traditional calculator with a display and buttons arranged in a grid layout.
 
-🎯 Features
-Addition, subtraction, multiplication, and division
+# 🧮 Java Calculator (Swing + AWT)
 
-Square root function
+A simple calculator application built in Java using **Swing** and **AWT** for the graphical user interface. This calculator mimics the functionality of a basic physical calculator and supports standard arithmetic operations.
 
-Percentage calculation
+---
 
-Toggle between positive/negative numbers
+## 📸 Screenshot
 
-Clear function
 
-Supports decimal inputs
 
-⚙️ GUI Components
-JFrame – Main application window titled "CALCULATOR".
+## 🚀 Features
 
-JLabel disLabel – Display label showing inputs/results.
+* Addition, Subtraction, Multiplication, Division
+* Square root calculation
+* Percentage operation
+* Positive/Negative toggle (`+/-`)
+* Clear button (`AC`)
+* Decimal support
 
-JPanel disPanel – Contains the display label.
+---
 
-JPanel buttonPanel – Contains all calculator buttons in a grid layout.
+## 🛠️ Tech Stack
 
-🧠 Code Structure
-✅ Calculator Class
-This is the main class that initializes the calculator UI and logic.
+* Java 8 or higher
+* Swing
+* AWT
 
-Fields:
-String[] buttonValues – All button labels.
+---
 
-String[] rightSymbols – Right-column operator buttons (÷, x, -, +, =).
 
-String[] topSymbols – Top-row function buttons (AC, +/-, %).
+## 🧠 How It Works
 
-String A – First operand (as string).
+* The calculator GUI is built with `JFrame`, `JPanel`, `JButton`, and `JLabel`.
+* All button events are handled using `ActionListener`.
+* Input is taken via number and operator buttons.
+* Upon pressing `=`, the selected operation is performed using the stored operands and operator.
+* The result is displayed with formatting (e.g., whole numbers shown without `.0`).
 
-String B – Second operand (as string).
+---
 
-String operator – Stores the operator selected.
+## ▶️ How to Run
 
-String str – Temporary string for square root calculation.
+1. Clone the repository or download the code.
+2. Navigate to the project folder.
+3. Compile the Java file:
 
-double s – Temporary variable for square root calculation.
-
-🧮 Functional Flow
-UI Initialization
-The calculator frame is built using a BorderLayout.
-
-Display panel is placed at the top (NORTH), and button panel fills the center.
-
-Buttons are created dynamically from buttonValues[], styled, and assigned action listeners.
-
-Button Logic (ActionListener)
-Depending on the button pressed:
-
-➕ Arithmetic Operators (+, -, x, ÷)
-On operator press, store the first number in A and the operator.
-
-Wait for the second input.
-
-On = press, perform the operation using A and B.
-
-🧮 Functions (AC, +/-, %)
-AC: Resets all state and display.
-
-+/-: Negates current number.
-
-%: Divides current number by 100.
-
-🔢 Numbers & Decimal
-Appends digits or decimal to display.
-
-√ Square Root
-When √ is pressed, √ is displayed.
-
-When = is pressed, if √ is detected, performs square root of the number.
-
-🧱 Methods
-clearZero(double num)
-Formats the number before displaying:
-
-If the result is a whole number (e.g. 8.0), only 8 is shown.
-
-If it's a decimal (e.g. 8.5), it's displayed as-is.
-
-clearall()
-Resets all values:
-
-java
-Copy
-Edit
-disLabel.setText("0");
-A = "0";
-B = null;
-operator = null;
-▶️ How to Run
-Save the file as Calculator.java.
-
-Compile and run:
-
-bash
-Copy
-Edit
+```
 javac Calculator.java
+```
+
+4. Run the program:
+
+```
 java Calculator
-💡 Notes & Improvements
-String comparisons – Use .equals() instead of ==:
+```
 
-java
-Copy
-Edit
-if (buttonPressed.equals("=")) // instead of buttonPressed == "="
-Null checks – Add checks before parsing Double.parseDouble() to prevent crashes.
+---
 
-Better operator handling – Use enum or switch statements for better readability.
+## 📌 Example Usage
 
-Layout Enhancements – Adjust panel spacing/margins for cleaner UI.
+* Enter `12`, press `+`, then `8`, then `=`, and you’ll get `20`.
+* Press `√`, enter a number like `25`, then `=`, and it will return `5`.
+* Use `%` to find percentages, and `+/-` to toggle the sign.
 
-Code modularity – Split logic into smaller helper methods for readability and maintenance.
+---
+
+## ⚠️ Known Limitations
+
+* Code uses `==` instead of `.equals()` for string comparisons (not recommended in Java).
+* Square root function only works in a specific input sequence.
+* No error handling for divide-by-zero or malformed inputs yet.
+
+---
+
+## 📈 Future Improvements
+
+* Replace `==` with `.equals()` for correct string comparison.
+* Add memory functions (M+, M-, MR).
+* Improve layout responsiveness for different window sizes.
+* Add unit tests for arithmetic operations.
+
+---
+
+## 📝 License
+
+This project is open-source and available under the 
+
+---
+
+## 👨‍💻 Author
+
+Developed by \T S BHUVANESHWAR. Contributions and suggestions are welcome!
+
+```
+
