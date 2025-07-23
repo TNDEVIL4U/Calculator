@@ -7,6 +7,7 @@ A simple calculator application built in Java using **Swing** and **AWT** for th
 
 ## 📸 Screenshot
 
+<img width="436" height="672" alt="Screenshot 2025-07-23 210326" src="https://github.com/user-attachments/assets/023a165a-68bf-4c8e-8487-df833cc3587e" />
 
 
 ## 🚀 Features
