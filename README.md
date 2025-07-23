@@ -1,4 +1,4 @@
-📘 Java Calculator - Documentation
+📘 Java Calculator
 📌 Overview
 This Java-based GUI calculator provides basic arithmetic operations using the Swing and AWT libraries. The interface mimics a traditional calculator with a display and buttons arranged in a grid layout.
 
